@@ -182,24 +182,7 @@
     transition: border-color 0.2s, color 0.2s, transform 0.2s;
   }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent-light); transform: translateY(-2px); }
-  .hero-photo-wrap {
-    position: absolute; right: clamp(0px, 5vw, 80px); top: 50%; transform: translateY(-50%);
-    opacity: 0; animation: fadeLeft 0.9s 0.5s forwards;
-  }
-  .hero-photo {
-    width: clamp(160px, 22vw, 260px); height: clamp(160px, 22vw, 260px);
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--accent-border);
-    box-shadow: 0 0 0 8px var(--accent-glow), 0 20px 60px rgba(0,0,0,0.4);
-  }
-  .hero-photo-ring {
-    position: absolute; inset: -12px; border-radius: 50%;
-    border: 1px dashed var(--accent-border);
-    animation: spin 20s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
- .hero-stats {
+   .hero-stats {
     display: flex; gap: clamp(1.5rem, 4vw, 3rem); margin-top: 3.5rem; flex-wrap: wrap;
     opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
   }
@@ -212,9 +195,7 @@
   .stat-label { font-size: 0.78rem; color: var(--text3); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.25rem; }
 
   @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes fadeLeft { from { opacity:0; transform:translate(30px,-50%); } to { opacity:1; transform:translate(0,-50%); } }
-
-  /* ─── SECTION BASICS ─── */
+   /* ─── SECTION BASICS ─── */
   section { padding: 6rem clamp(1.5rem, 5vw, 4rem); position: relative; z-index: 1; }
   .section-label {
     font-size: 0.72rem; font-weight: 600; color: var(--accent);
@@ -393,8 +374,7 @@
 
   /* ─── RESPONSIVE ─── */
   @media(max-width:900px) {
-    .hero-photo-wrap { display:none; }
-    .hero-content { max-width:100%; }
+       .hero-content { max-width:100%; }
     .about-grid { grid-template-columns:1fr; gap:2.5rem; }
     .contact-wrapper { grid-template-columns:1fr; }
     section { padding: 4rem clamp(1rem, 4vw, 3rem); }
@@ -486,16 +466,7 @@
       </div>
     </div>
   </div>
-  <div class="hero-photo-wrap">
-    <div class="hero-photo-ring"></div>
-    <img
-      class="hero-photo"
-      src="https://media.licdn.com/dms/image/v2/D5635AQHgdav3ldlTpg/profile-framedphoto-shrink_800_800/B56Z1PKJtaJgAk-/0/1775149554829?e=1776614400&v=beta&t=t6NsxWmgRrGO33fLtTRGIvH0ZGgv9ZQqMgj_GEjfmIQ"
-      alt="Gangadhara Rao Arepalli"
-      onerror="this.style.display='none'"
-    />
-  </div>
-</section>
+  </section>
 
 <div class="divider"></div>
 
